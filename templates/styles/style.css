@@ -1,0 +1,95 @@
+body{
+    background: white;
+    padding: 5px 20px;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: grid;
+    align-items: center;
+    margin:0 auto;
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center;
+}
+
+header{
+    width:100%;
+    text-align: center;
+    font-size: 1.5rem; 
+    margin: 0 0;
+    color: darkblue;
+}
+
+hr{
+    width:90%;
+    height: 2px;
+    border-color: #D3D3D3;
+    background-color: #D3D3D3;
+}
+
+form{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #5A5A5A;
+}
+
+.form-name{
+    color:darkblue;
+    font-weight: bold;
+    font-size:1rem;
+    margin-bottom: 20px;
+
+}
+
+
+input[type=text]{
+    width: 80%;
+    height: calc(1.5em + 0.75rem + 2px);
+    color: #495057;
+    padding-left: 0.5rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+label{
+    
+    font-size:0.9rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+}
+
+.output{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.filling-form{
+    padding: 20px;
+    width:80%;
+    border: gray 5px solid;
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center;
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+}
+
+button{
+    background-color: darkblue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+
+
+
+
+

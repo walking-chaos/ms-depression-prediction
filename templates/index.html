@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Прогнозирование депрессии у пациентов с рассеянным склерозом</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    
+    <body>
+        <div class="filling-form">
+            <header>Прогнозирование депрессии у пациентов с рассеянным склерозом</header>
+            <hr>
+            <form name="form", method="POST">
+                <br>
+                <span class="form-name">Пол:</span>
+                <br><br>
+                    <label>
+                        <input type="radio" name="gender" value="M" required>
+                        Мужской
+                    </label><br>
+            
+                    <label>
+                        <input type="radio" name="gender" value="F">
+                        Женский
+                    </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Возраст:</span>
+                <br><br><input type="text" name="age", placeholder="Введите возраст пациента" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Форма заболевания:</span> <br><br>
+                <label>
+                    <input type="radio" name="form" value="RRMS" required>
+                    Ремиттирующая форма
+                </label><br>
+                <label>
+                    <input type="radio" name="form" value="SPMS">
+                    Вторично-прогрессирующая форма
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Образование: </span> <br><br>
+                <label>
+                    <input type="radio" name="education" value=0 required>
+                    Среднее образование
+                </label><br>
+                <label>
+                    <input type="radio" name="education" value=1>
+                    Среднее специальное образование
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="education" value=2>
+                    Высшее образование
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Группа инвалидности:</span> <br><br>
+                <label>
+                    <input type="radio" name="group_of_disability" value=0 required>
+                    Отсутствует
+                </label><br>
+                <label>
+                    <input type="radio" name="group_of_disability" value=1>
+                    I группа инвалидности
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="group_of_disability" value=2>
+                    II группа инвалидности
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="group_of_disability" value=3>
+                    III группа инвалидности
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Продолжительность заболевания: </span>
+                <br><br><input type="text" name="disease_duration", placeholder="Введите продолжительность заболевания в годах" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Связь заболевания со стрессом: </span> <br><br>
+                <label>
+                    <input type="radio" name="connection_with_stress" value=0 required>
+                    Отсутствует
+                </label><br>
+                <label>
+                    <input type="radio" name="connection_with_stress" value=1>
+                    Есть
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Результат девятиколышкового теста для правой руки: </span>
+                <br><br><input type="text" name="9_HPT_right", placeholder="Введите результат в секундах (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Результат девятиколышкового теста для левой руки:</span>
+                <br><br><input type="text" name="9_HPT_left", placeholder="Введите результат в секундах (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Результат теста 25-футовой ходьбы: </span>
+                <br><br><input type="text" name="25_foot_test", placeholder="Введите результат в секундах (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Балл по шкале EDSS: </span>
+                <br><br><input type="text" name="EDSS", placeholder="Введите балл (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Проведение плазмафереза: </span> <br><br>
+                <label>
+                    <input type="radio" name="plasmapheresis" value=0 required>
+                    Не проводился
+                </label><br>
+                <label>
+                    <input type="radio" name="plasmapheresis" value=1>
+                    Проводился
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Лечение ПИТРС:</span> <br><br>
+                <label>
+                    <input type="radio" name="DMT" value=0 required>
+                    Не проводилось
+                </label><br>
+                <label>
+                    <input type="radio" name="DMT" value=1>
+                    Проводилось
+                </label>
+                <br><br>
+                <hr>
+                <span class="form-name">Результат теста MoCA: </span>
+                <br><br><input type="text" name="MOCA_score", placeholder="Введите результат в баллах" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Процент выполнения SDMT:</span>
+                <br><br><input type="text" name="SDMT_percent", placeholder="Введите результат в процентах (без знака процента, разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Эффективность работы по таблицам Шульте: </span>
+                <br><br><input type="text" name="schulte_efficiency", placeholder="Введите результат оценки эффективности в баллах" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Степень врабатываемости по таблицам Шульте: </span>
+                <br><br><input type="text" name="schulte_adaptability", placeholder="Введите отношение времени первой попытки к среднему времени прохождения (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Психическая устойчивость по таблицам Шульте: </span>
+                <br><br><input type="text" name="schulte_psychic_resist", placeholder="Введите отношение времени четвертой попытки к среднему времени прохождения (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Психический компонент опросника SF-36:</span>
+                <br><br><input type="text" name="SF-36_psychic", placeholder="Введите результат (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <span class="form-name">Физический компонент опросника SF-36: </span>
+                <br><br><input type="text" name="SF-36_physical", placeholder="Введите результат (разделитель - точка)" required/>
+                <br><br>
+                <hr>
+                <button value="Submit">Запустить прогноз</button>
+            </form>
+            <p class="output">{{ output }}</p>
+        </div>
+    </body>
+</html>
